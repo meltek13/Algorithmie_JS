@@ -15,7 +15,11 @@ const exo3 = (inputArr, k) => {
 
     comparaisonsExo3++;
     console.log(inputArr.filter((num) => inputArr[num] !== i));
-    if (inputArr.filter((num) => inputArr[num] !== i).includes(searchingValue))
+    if (
+      inputArr
+        .filter((num) => inputArr.indexOf(num) !== i)
+        .includes(searchingValue)
+    )
       return true;
   }
   return false;
